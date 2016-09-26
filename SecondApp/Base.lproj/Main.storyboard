@@ -17,39 +17,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="akX-3I-OVB">
-                                <rect key="frame" x="42" y="174" width="247" height="31"/>
-                                <color key="minimumTrackTintColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="maximumTrackTintColor" red="0.50196081400000003" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            </slider>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="T0B-LH-jfB">
-                                <rect key="frame" x="141" y="344" width="51" height="31"/>
-                                <color key="onTintColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                            </switch>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Hello" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rhn-WN-Nxb">
-                                <rect key="frame" x="117" y="274" width="97" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="7BO-LF-lI6">
-                                <rect key="frame" x="42" y="233" width="247" height="29"/>
-                                <segments>
-                                    <segment title="Farr"/>
-                                    <segment title="The Naz"/>
-                                    <segment title="Jackary"/>
-                                </segments>
-                            </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Who is the Best?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ikg-be-sOv">
                                 <rect key="frame" x="98" y="390" width="135" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="98" y="139" width="135" height="21"/>
+                                </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AxO-6l-dxh">
                                 <rect key="frame" x="112" y="436" width="107" height="30"/>
-                                <state key="normal" title="Is The Best"/>
+                                <state key="normal" title="Check"/>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="112" y="231" width="107" height="30"/>
+                                </variation>
                                 <connections>
+                                    <action selector="clicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="z75-gs-Nmt"/>
                                     <action selector="firstUIButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SuK-0x-Fdo"/>
+                                    <action selector="ifClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aMN-0R-ExD"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -57,6 +43,8 @@
                     </view>
                     <connections>
                         <outlet property="background" destination="8bC-Xf-vdC" id="Wrq-fP-ORu"/>
+                        <outlet property="clicked" destination="AxO-6l-dxh" id="9aV-um-Wtt"/>
+                        <outlet property="firstButton" destination="AxO-6l-dxh" id="TuK-Ir-3lM"/>
                         <outlet property="firstUIButton" destination="AxO-6l-dxh" id="Flh-Qg-JmL"/>
                         <outlet property="textLabel" destination="Ikg-be-sOv" id="bZ2-2I-rvT"/>
                     </connections>

@@ -20,15 +20,29 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-    @IBAction func clickedButton(sender: UIButton)
-    {
-       background.backgroundColor = UIColor.blueColor()
+    @IBAction func clicked(sender: UIButton) {
+        background.backgroundColor = makeRandomColor()
     }
-
+   
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    private func makeRandomColor() -> UIColor
+    {
+        //make threee values from 0-255
+        
+        let randomColor: UIColor
+        let red :CGFloat = CGFloat(drand48())
+        let green :CGFloat = CGFloat(drand48())
+        let blue :CGFloat = CGFloat(drand48())
+        
+        randomColor = UIColor(red: red, green: green, blue: blue, alpha: 1.0)
+        
+        return randomColor
+        
+    }
+
 
 
 }
