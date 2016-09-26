@@ -56,13 +56,14 @@
                         <color key="backgroundColor" red="0.40000000600000002" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <connections>
+                        <outlet property="background" destination="8bC-Xf-vdC" id="Wrq-fP-ORu"/>
                         <outlet property="firstUIButton" destination="AxO-6l-dxh" id="Flh-Qg-JmL"/>
                         <outlet property="textLabel" destination="Ikg-be-sOv" id="bZ2-2I-rvT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="305" y="418"/>
+            <point key="canvasLocation" x="305" y="417.75"/>
         </scene>
     </scenes>
 </document>

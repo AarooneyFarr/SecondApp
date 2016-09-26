@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet var background: UIView!
+    
     @IBOutlet weak var textLabel: UILabel!
     
     @IBOutlet weak var firstUIButton: UIButton!
@@ -20,8 +22,7 @@ class ViewController: UIViewController {
     }
     @IBAction func clickedButton(sender: UIButton)
     {
-        textLabel.text = "Aaron Farr"
-        textLabel.textColor = UIColor.cyanColor()
+       background.backgroundColor = UIColor.blueColor()
     }
 
     override func didReceiveMemoryWarning() {
