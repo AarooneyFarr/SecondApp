@@ -10,9 +10,18 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var textLabel: UILabel!
+    
+    @IBOutlet weak var firstUIButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+    }
+    @IBAction func clickedButton(sender: UIButton)
+    {
+        textLabel.text = "Aaron Farr"
+        textLabel.textColor = UIColor.cyanColor()
     }
 
     override func didReceiveMemoryWarning() {
